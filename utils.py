@@ -39,7 +39,8 @@ class SnakeChallenge():
         if not (1<=self.depth and self.depth<=20):
             raise SnakeError('Incorrect depth')
         return True
-        
+    
+    #Returns valid movements of the snake's head
     def validActions(self):
         valid = []
         headCol = self.snake[0][0]
@@ -54,6 +55,7 @@ class SnakeChallenge():
             valid.append('U')
         return valid
         
+    #Calculate new snakes based on movements
     def neighbours(self,actions):
         snakes = []
         headCol = self.snake[0][0]
